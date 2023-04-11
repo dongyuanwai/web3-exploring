@@ -30,7 +30,7 @@ async function main(){
   console.log(`retrieve newValue is:${newValue}`,)
 }
 
-async function verify(contractAddress,args){
+const verify = async (contractAddress,args) => {
   console.log("verifying contract验证合约...",contractAddress,args)
   try{
     await run("verify:verify", {
