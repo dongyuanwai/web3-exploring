@@ -9,7 +9,8 @@ require("hardhat-gas-reporter")
 const ALCHEMY_SEPOLIA_URL = process.env.ALCHEMY_SEPOLIA_URL
 const GOERLI_PRIVATE_KEY = process.env.GOERLI_PRIVATE_KEY
 const ETHERSCAN_API_KEY = process.env.ETHERSCAN_API_KEY
-const mnemonic ="across river smooth yellow alter enrich rocket clip marriage law purity space"
+
+const MNEMONIC = process.env.MNEMONIC
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork:"hardhat",
@@ -23,7 +24,7 @@ module.exports = {
     mumbai: {
       url: "https://polygon-mumbai.blockpi.network/v1/rpc/public",
       accounts: {
-        mnemonic: mnemonic,
+        mnemonic: MNEMONIC,
       },
       chainId: 80001,
     },

@@ -11,3 +11,7 @@ REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
 ```
+
+
+部署到mumbai上：
+https://mumbai.polygonscan.com/address/0x3caCeD66Ec7DC002993E30925cE1Be325cef937D

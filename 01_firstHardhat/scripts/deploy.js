@@ -13,10 +13,10 @@ async function main(){
 // 验证合约
   // 获取当前的网络配置，是运行在本地还是在测试网
   console.log("运行的网络",network.config)
-  if(network.config.chainId === 11155111 && process.env.ETHERSCAN_API_KEY){
+  if(network.config.chainId === 80001 && process.env.ETHERSCAN_API_KEY){
     // 部署到链上时有一定的延迟，所以等六个区块再运行
     console.log("要等待六个区块验证...")
-    await simpleStorage.deployTransaction.wait(6)
+    await simpleStorage.deployTransaction.wait(2)
     await verify(simpleStorage.address,[])
   }
 
